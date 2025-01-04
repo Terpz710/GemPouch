@@ -32,6 +32,14 @@ final class GemPouch extends PluginBase {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         $this->getServer()->getCommandMap()->register("GemPouch", new PouchCommand());
+        
+        $gems = $this->getServer()->getPluginManager()->getPlugin("Gems");
+
+        if ($gems === null) {
+            $this->getLogger()->error("The plugin 'Gems by Terpz710' is not installed!");
+            $this->getServer()->getPluginManager()->disablePlugin($this);
+            return;
+        }
     }
 
     public static function getInstance() : self{
