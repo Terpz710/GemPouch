@@ -20,6 +20,8 @@ use pocketmine\utils\TextFormat as TextColor;
 use function array_map;
 use function number_format;
 
+use terpz710\gempouch\exception\MissingGemsException;
+
 final class GemPouch extends PluginBase {
 
     protected static $instance;
@@ -32,13 +34,9 @@ final class GemPouch extends PluginBase {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         $this->getServer()->getCommandMap()->register("GemPouch", new PouchCommand());
-        
         $gems = $this->getServer()->getPluginManager()->getPlugin("Gems");
-
         if ($gems === null) {
-            $this->getLogger()->error("The plugin 'Gems by Terpz710' is not installed!");
-            $this->getServer()->getPluginManager()->disablePlugin($this);
-            return;
+            throw new MissingGemsException("Gems");
         }
     }
 
