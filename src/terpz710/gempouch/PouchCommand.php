@@ -34,7 +34,7 @@ class PouchCommand extends Command implements PluginOwned {
         $this->plugin = GemPouch::getInstance();
     }
 
-    public function execute(CommandSender $sender, string $label, array $args) : bool {
+    public function execute(CommandSender $sender, string $label, array $args) : bool{
         if (!$sender instanceof Player) {
             $sender->sendMessage("This command can only be used in-game...");
             return false;
