@@ -1,0 +1,45 @@
+# Created by Terpz710 :p
+
+# Pouch item name
+# & = Color code
+pouch-name: "&r&l- &4Gem Pouch&f -"
+
+# Pouch item lore
+# & = Color code
+# Available tags:
+# - {amount} = Amount the pouch has
+# - {name} = Name of the creator
+pouch-lore:
+ - ""
+ - "&r&fAmount: &a{amount}"
+ - ""
+ - "&r&5Created by {name}"
+
+# Pouch item enchantment
+pouch-enchantment: "fortune"
+
+# Pouch item enchantment level
+pouch-enchantment-level: 3
+
+# Insufficient gems message
+# & = Color code
+# Available tags:
+# - {amount} = Required gems
+# - {balance} = Balance of the player
+pouch-insufficient-gems: "&cYou do not have enough gems! You currently have {balance} gems, but you need {amount} gems!"
+
+# Created/received a gempouch message
+# & = Color code
+# Available tags:
+# - {amount} = Amount given to the pouch
+pouch-recieve-message: "&aCreated a pouch with {amount} gems!"
+
+# Claimed a gempouch message
+# & = Color code
+# Available tags:
+# - {amount} = Amount claimed from the pouch
+pouch-claim-message: "&aClaimed a pouch worth {amount} gems!"
+
+# Invalid number message
+# & = Color code
+pouch-invalid-number: "&cAmount must be a positive integer!"

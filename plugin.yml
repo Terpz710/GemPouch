@@ -1,0 +1,9 @@
+name: GemPouch
+version: 1.0.0
+author: Terpz710
+api: 5.0.0
+main: terpz710\gempouch\GemPouch
+
+permissions:
+  gempouch.cmd:
+    default: true
