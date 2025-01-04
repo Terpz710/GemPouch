@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Terpz710/GemPouch
+build-by-default: true
+branches:
+- main
+projects:
+  GemPouch:
+    path: ""
+    lint: false
+...
