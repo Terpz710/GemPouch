@@ -1,10 +1,10 @@
 # Description
-GemPouch is a bank-note like plugin which holds your [Gem](https://github.com/Terpz710/Gems) currency within a nether star item.
+GemPouch is a bank-note like plugin which holds your [Gems](https://github.com/Terpz710/Gems) currency within a nether star item.
 
 Players can interact with the star to claim the virtual gems.
 
 # Requires
-This plugin requires [Gem](https://github.com/Terpz710/Gems) currency plugin for it to work!
+This plugin requires [Gems](https://github.com/Terpz710/Gems) currency plugin for it to work!
 
 # API
 **How to obtain a pouch**
@@ -17,9 +17,13 @@ $player is an instance of Player::class
 
 $amount = 100;
 
-$api->givePouch($player, $amount);
+$pouch = $api->givePouch($player, $amount);
+
+$player->getInventory()->addItem($pouch);
 
 or
 
-$api->givePouch($player, 100);
+$pouch = $api->givePouch($player, 100);
+
+$player->getInventory()->addItem($pouch);
 ```
